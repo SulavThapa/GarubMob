@@ -24,12 +24,14 @@ class Landing extends React.Component {
               <Text style={styles.secondarytext}>Hey, Welcome to the Garud Services. Choose your services.</Text>
             </Col>
             <Col style={{ width: '20%' }}>
-              <Image style={styles.img} source={require('../../../assets/service.png')}></Image>
+              <Image style={styles.logo} source={require('../../../assets/service.png')}></Image>
             </Col>
           </Row>
           {/* Ending Header of the application */}
+
+          {/* starting the body section */}
           <ScrollView>
-          <Row style={{top: '3%'}}>
+          <Row style={{marginTop: '3%'}}>
             <Col>
               <Card style={styles.card}>
                 <Image style={styles.img} source={require('../../../assets/people.png')}></Image>
@@ -44,7 +46,7 @@ class Landing extends React.Component {
             </Col>
           </Row>
 
-          <Row style={{top: '3%'}}>
+          <Row style={{marginTop: '6%'}}>
             <Col>
               <Card style={styles.card}>
                 <Image style={styles.img} source={require('../../../assets/avatar.png')}></Image>
@@ -58,7 +60,7 @@ class Landing extends React.Component {
               </Card>
             </Col>
           </Row>
-          <Row style={{top: '3%'}}>
+          <Row style={{marginTop: '6%'}}>
             <Col>
               <Card style={styles.card}>
                 <Image style={styles.img} source={require('../../../assets/bodyguard.png')}></Image>
@@ -68,22 +70,22 @@ class Landing extends React.Component {
             <Col>
               <Card style={styles.card}>
                 <Image style={styles.img} source={require('../../../assets/spray.png')}></Image>
-                <Text style={styles.cardtext}>Cleaning Solution</Text>
+                <Text style={styles.fittext}>Cleaning Solution</Text>
               </Card>
             </Col>
           </Row>
 
-          <Row style={{top: '3%'}}>
+          <Row style={{marginTop: '5%', alignContent: 'center'}}>
             <Col>
-              <Card style={styles.card}>
-                <Image style={styles.img} source={require('../../../assets/bodyguard.png')}></Image>
-                <Text style={styles.cardtext}>BodyGuard</Text>
+              <Card style={styles.lastcard}>
+                <Image style={styles.img} source={require('../../../assets/bouncer.png')}></Image>
+                <Text style={styles.cardtext}>Bouncer</Text>
               </Card>
             </Col>
           </Row>
+         <Row style={{height: 50}}/>
           </ScrollView>
-         
-
+         {/* Ending the body section */}
         </SafeAreaView>
       </React.Fragment>
     );
@@ -95,9 +97,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#F2EDC6'
   },
-  img: {
+  logo: {
     height: 100,
     width: 100
+  },
+  img: {
+    height: 80,
+    width: 80
   },
   texthead: {
     left: '5%',
@@ -114,6 +120,7 @@ const styles = StyleSheet.create({
     color: '#707070'
   },
   card: {
+    top: '3%',
     left: '9%',
     width: '77%',
     borderRadius: 15,
@@ -124,9 +131,26 @@ const styles = StyleSheet.create({
   cardtext: {
     left: '5%',
     fontFamily: 'courier new',
-    fontSize: 15,
+    fontSize: 13,
     fontWeight: 'bold',
     color: '#000'
+  },
+  lastcard:{
+    width: '40%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 15,
+    height: 150,
+    left: '30%',
+    justifyContent: 'center',
+  },
+  fittext: {
+    left: '5%',
+    fontFamily: 'courier new',
+    fontSize: 13,
+    fontWeight: 'bold',
+    color: '#000',
+    textAlign: 'center'
   },
 })
 
