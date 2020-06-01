@@ -13,6 +13,10 @@ import {
 import { Card } from 'react-native-shadow-cards';
 
 class Landing extends React.Component {
+  static navigationOptions = {
+    headerStyle: { backgroundColor: 'white', borderBottomWidth: 0 },
+    headerShown: false,
+  };
   render() {
     return (
       <React.Fragment>
@@ -38,7 +42,7 @@ class Landing extends React.Component {
                 <Text style={styles.cardtext}>Driver</Text>
               </Card>
             </Col>
-            <Col>
+            <Col style={{marginLeft: '-6%'}}>
               <Card style={styles.card}>
                 <Image style={styles.img} source={require('../../../assets/sanitize.png')}></Image>
                 <Text style={styles.cardtext}>Sanitize</Text>
@@ -53,7 +57,7 @@ class Landing extends React.Component {
                 <Text style={styles.cardtext}>Security</Text>
               </Card>
             </Col>
-            <Col>
+            <Col style={{marginLeft: '-6%'}}>
               <Card style={styles.card}>
                 <Image style={styles.img} source={require('../../../assets/mop.png')}></Image>
                 <Text style={styles.cardtext}>House Cleaning</Text>
@@ -67,7 +71,7 @@ class Landing extends React.Component {
                 <Text style={styles.cardtext}>BodyGuard</Text>
               </Card>
             </Col>
-            <Col>
+            <Col style={{marginLeft: '-6%'}}>
               <Card style={styles.card}>
                 <Image style={styles.img} source={require('../../../assets/spray.png')}></Image>
                 <Text style={styles.fittext}>Cleaning Solution</Text>
@@ -83,7 +87,7 @@ class Landing extends React.Component {
               </Card>
             </Col>
           </Row>
-         <Row style={{height: 50}}/>
+         <Row style={{height: 30}}/>
           </ScrollView>
          {/* Ending the body section */}
         </SafeAreaView>
@@ -122,14 +126,15 @@ const styles = StyleSheet.create({
   card: {
     top: '3%',
     left: '9%',
-    width: '77%',
+    width: '72%',
     borderRadius: 15,
     height: 150,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    textAlign: 'center'
   },
   cardtext: {
-    left: '5%',
+    top: '2%',
     fontFamily: 'courier new',
     fontSize: 13,
     fontWeight: 'bold',
