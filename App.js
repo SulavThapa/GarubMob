@@ -1,19 +1,21 @@
 import React from 'react';
-import{
+import {
+  StyleSheet,
   SafeAreaView,
   Text
 } from 'react-native';
+import Landing from './src/components/pages/Landing';
 
-class App extends React.Component{
-  render(){
-    return(
-      <SafeAreaView>
-        <Text style={{textAlign: 'center'}}>
-          Get Started
-        </Text>
-      </SafeAreaView>
+class App extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Landing/>
+      </React.Fragment>
     );
   }
 }
+
+console.disableYellowBox = true;
 
 export default App;
