@@ -4,7 +4,8 @@ import {
   SafeAreaView,
   Text,
   Image,
-  ScrollView
+  ScrollView,
+  TouchableOpacity
 } from 'react-native';
 import {
   Col,
@@ -35,61 +36,65 @@ class Landing extends React.Component {
 
           {/* starting the body section */}
           <ScrollView>
-          <Row style={{marginTop: '3%'}}>
-            <Col>
-              <Card style={styles.card}>
-                <Image style={styles.img} source={require('../../../assets/people.png')}></Image>
-                <Text style={styles.cardtext}>Driver</Text>
-              </Card>
-            </Col>
-            <Col style={{marginLeft: '-6%'}}>
-              <Card style={styles.card}>
-                <Image style={styles.img} source={require('../../../assets/sanitize.png')}></Image>
-                <Text style={styles.cardtext}>Sanitize</Text>
-              </Card>
-            </Col>
-          </Row>
+            <Row style={{ marginTop: '3%' }}>
+              <Col>
+                <Card style={styles.card}>
+                  <TouchableOpacity>
+                    <Image style={styles.img} source={require('../../../assets/people.png')}></Image>
+                    <Text style={styles.cardtext}>Driver</Text>
+                  </TouchableOpacity>
+                </Card>
+              </Col>
+              <Col style={{ marginLeft: '-6%' }}>
+                <Card style={styles.card}>
+                  <Image style={styles.img} source={require('../../../assets/sanitize.png')}></Image>
+                  <Text style={styles.cardtext}>Sanitize</Text>
+                </Card>
+              </Col>
+            </Row>
 
-          <Row style={{marginTop: '6%'}}>
-            <Col>
-              <Card style={styles.card}>
-                <Image style={styles.img} source={require('../../../assets/avatar.png')}></Image>
-                <Text style={styles.cardtext}>Security</Text>
-              </Card>
-            </Col>
-            <Col style={{marginLeft: '-6%'}}>
-              <Card style={styles.card}>
-                <Image style={styles.img} source={require('../../../assets/mop.png')}></Image>
-                <Text style={styles.cardtext}>House Cleaning</Text>
-              </Card>
-            </Col>
-          </Row>
-          <Row style={{marginTop: '6%'}}>
-            <Col>
-              <Card style={styles.card}>
-                <Image style={styles.img} source={require('../../../assets/bodyguard.png')}></Image>
-                <Text style={styles.cardtext}>BodyGuard</Text>
-              </Card>
-            </Col>
-            <Col style={{marginLeft: '-6%'}}>
-              <Card style={styles.card}>
-                <Image style={styles.img} source={require('../../../assets/spray.png')}></Image>
-                <Text style={styles.fittext}>Cleaning Solution</Text>
-              </Card>
-            </Col>
-          </Row>
+            <Row style={{ marginTop: '6%' }}>
+              <Col>
+                <Card style={styles.card}>
+                  <Image style={styles.img} source={require('../../../assets/avatar.png')}></Image>
+                  <Text style={styles.cardtext}>Security</Text>
+                </Card>
+              </Col>
+              <Col style={{ marginLeft: '-6%' }}>
+                <Card style={styles.card}>
+                  <Image style={styles.img} source={require('../../../assets/mop.png')}></Image>
+                  <Text style={styles.cardtext}>House Cleaning</Text>
+                </Card>
+              </Col>
+            </Row>
+            <Row style={{ marginTop: '6%' }}>
+              <Col>
+                <Card style={styles.card}>
+                  <Image style={styles.img} source={require('../../../assets/bodyguard.png')}></Image>
+                  <Text style={styles.cardtext}>BodyGuard</Text>
+                </Card>
+              </Col>
+              <Col style={{ marginLeft: '-6%' }}>
+                <Card style={styles.card}>
+                  <Image style={styles.img} source={require('../../../assets/spray.png')}></Image>
+                  <Text style={styles.fittext}>Cleaning Solution</Text>
+                </Card>
+              </Col>
+            </Row>
 
-          <Row style={{marginTop: '5%', alignContent: 'center'}}>
-            <Col>
-              <Card style={styles.lastcard}>
-                <Image style={styles.img} source={require('../../../assets/bouncer.png')}></Image>
-                <Text style={styles.cardtext}>Bouncer</Text>
-              </Card>
-            </Col>
-          </Row>
-         <Row style={{height: 30}}/>
+            <Row style={{ marginTop: '5%', alignContent: 'center' }}>
+              <Col>
+                <Card style={styles.lastcard}>
+                  <Image style={styles.img} source={require('../../../assets/bouncer.png')}></Image>
+                  <Text style={styles.cardtext}>Bouncer</Text>
+                </Card>
+              </Col>
+            </Row>
+            <Row style={{ height: 30 }} />
+            <Text style={styles.footer}>@CopyRight 2018-2020 Sulav Thapa</Text>
+            <Row style={{ height: 10 }} />
           </ScrollView>
-         {/* Ending the body section */}
+          {/* Ending the body section */}
         </SafeAreaView>
       </React.Fragment>
     );
@@ -125,7 +130,7 @@ const styles = StyleSheet.create({
   },
   card: {
     top: '3%',
-    left: '9%',
+    left: '13%',
     width: '72%',
     borderRadius: 15,
     height: 150,
@@ -134,13 +139,14 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   cardtext: {
-    top: '2%',
+    top: '3%',
     fontFamily: 'courier new',
     fontSize: 13,
     fontWeight: 'bold',
-    color: '#000'
+    color: '#000',
+    textAlign:'center'
   },
-  lastcard:{
+  lastcard: {
     width: '40%',
     justifyContent: 'center',
     alignItems: 'center',
@@ -157,6 +163,13 @@ const styles = StyleSheet.create({
     color: '#000',
     textAlign: 'center'
   },
+  footer:{
+    fontFamily:'courier new',
+    fontWeight: 'bold',
+    fontSize: 12,
+    color: '#777',
+    textAlign: 'center'
+  }
 })
 
 
